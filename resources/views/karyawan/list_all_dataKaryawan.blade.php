@@ -1,19 +1,16 @@
 @extends('karyawan.layout_dataKaryawan')
-@section('title', 'Data Karyawan')
+@section('title', 'Data Karyawan PT Petrokimia Gresik')
 
 @section('content')
 @section('action', $karyawan)
 <p>
-    <a class="nav-link" href="/karyawan/tambah">
-    	<span data-feather="plus"></span>
-    		Tambah Data Karyawan
-    </a>
+    <a href="/karyawan/tambah" class="btn btn-success"><span data-feather="plus"></span>Tambah Data Karyawan</a>
 </p>	
 @if($karyawan != null)
 	@component('components.table')
 		@slot('title')
 			<h5 align="center">
-				Data Karyawan PT Petrokimia Gresik
+				DATA KARYAWAN
 			</h5>
 		@endslot
 
@@ -38,7 +35,9 @@
 	        		<td>{{ $karyawan->departemen}}</td>
 	        		<td>{{ $karyawan->bagian}}</td>
 	        		<td>
-        				<p><a href="/karyawan/{{ $karyawan->id }}/edit">Edit</a> / <a href="/karyawan/{{ $karyawan->id }}/delete">Delete</a></p>
+        				<p>
+        					<a href="/karyawan/{{ $karyawan->id }}/edit" class="btn btn-primary"><span data-feather="edit"></span> Edit</a>   
+        					<a href="/karyawan/{{ $karyawan->id }}/delete" class="btn btn-danger"><span data-feather="trash-2"></span> Delete</a></p>
         			</td>
     			</tr>
     		@endforeach

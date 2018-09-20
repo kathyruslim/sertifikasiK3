@@ -3,7 +3,7 @@
 
 @section('content')
 @component('components.form')
-    @slot('title', 'Edit '.$karyawan->nama)
+    @slot('title', 'Edit Data Karyawan : '.$karyawan->nama)
     @slot('action', '/karyawan/'.$karyawan->id.'/edit')
     @slot('form_content')
 

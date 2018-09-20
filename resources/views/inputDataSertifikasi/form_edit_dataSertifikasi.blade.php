@@ -1,9 +1,8 @@
 @extends('inputDataSertifikasi.layout_inputSertifikasi')
-@section('title', 'Edit Data Sertifikasi Karyawan ' . $input_sertifikasi->id)
 
 @section('content')
 @component('components.form')
-	@slot('title', 'Edit Data Sertifikasi Karyawan ' . $input_sertifikasi->id)
+	@slot('title', 'Edit Data Sertifikasi Karyawan')
     @slot('action', '/inputDataSertifikasi/'.$input_sertifikasi->id.'/edit')
 
     @slot('form_content')
@@ -52,7 +51,7 @@
         <br>
 
         @component('components.input_submit')
-            @slot('value', 'Input')
+            @slot('value', 'Update')
         @endcomponent
 
     @endslot

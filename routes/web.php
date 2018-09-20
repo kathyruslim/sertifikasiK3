@@ -60,6 +60,13 @@ Route::get('/inputDataSertifikasi/input','inputSertifikasiController@form_input_
 
 Route::post('/inputDataSertifikasi/input','inputSertifikasiController@proses_input_dataSertifikasi');
 
+Route::get('upload/{upload}', function($upload = null)
+{
+    $file = Storage::get('upload/' . $upload);
+    $upload_file = Storage::mimeType('upload/' . $upload);
+    return response($file, 200)->header('Content-Type', $upload_file);
+});
+
 Route::get('/inputDataSertifikasi', 'inputSertifikasiController@show_all_inputDataSertifikasi');
 
 Route::get('/inputDataSertifikasi/{id}/delete', 'inputSertifikasiController@proses_delete_dataSertifikasiKaryawan');
@@ -67,3 +74,7 @@ Route::get('/inputDataSertifikasi/{id}/delete', 'inputSertifikasiController@pros
 Route::get('/inputDataSertifikasi/{id}/edit','inputSertifikasiController@form_edit_dataSertifikasi');
 
 Route::post('/inputDataSertifikasi/{id}/edit','inputSertifikasiController@proses_edit_dataSertifikasi');
+
+//proses rekapitulasi
+Route::get('/rekapitulasi', 'rekapitulasiController@show_all_rekapitulasi');
+Route::get('/detail_rekapitulasi/{id}', 'rekapitulasiController@show_selected_rekapitulasi');

@@ -73,7 +73,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
           </div>
-          <p>Selamat datang {{Auth::user()->username}}.</p>
+          <p><h1 align="center" style="font-size:160%;">Selamat Datang {{Auth::user()->username}}!</h1></p>
         </main>
       </div>
     </div>

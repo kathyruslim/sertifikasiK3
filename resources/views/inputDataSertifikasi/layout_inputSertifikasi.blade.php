@@ -13,6 +13,9 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('css/admin/dashboard.css')}}" rel="stylesheet">
+
+      <link rel="stylesheet" href="{{ asset('js/select2-master/dist/css/select2.css') }}">
+      <script src="{{ asset('js/jquery.min.js') }}"></script>
   </head>
 
   <body>
@@ -78,9 +81,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{asset('/js/admin/slim.min.js')}}"crossorigin="anonymous"></script>
     <script src="{{asset('/js/admin/popper.min.js')}}"></script>
     <script src="{{asset('/js/admin/bootstrap.min.js')}}"></script>
+
 
     <!-- Icons -->
     <script src="{{asset('/js/admin/feather.min.js')}}"></script>

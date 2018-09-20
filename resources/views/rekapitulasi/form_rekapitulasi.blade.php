@@ -3,7 +3,7 @@
 
 @section('content')
 
-	@if($input_sertifikasi != null)
+	@if($data != null)
 		@component('components.table')
 			@slot('title')
 			<h5 align="center">
@@ -21,16 +21,17 @@
 			@endslot
 
 			@slot('body')
-			@foreach( $input_sertifikasi as $input_sertifikasi)
+			@foreach( $data as $i => $input_sertifikasi)
 			<tr align="center">
-				<td>{{ $loop->index + 1}}</td>
+				<td>{{ $i + 1}}</td>
         		<td>{{ $input_sertifikasi->jenis }}</td>
-        		<td>{{ $input_sertifikasi->total }}</td>
-        		<td><a href="/rekapitulasi/{{ $input_sertifikasi->jenis }}">Detail</a></td>
+        		<td>{{ count(explode(",",$input_sertifikasi->id_jenis)) }}</td>
+        		<td><a href="detail_rekapitulasi/{{ $input_sertifikasi->jenis_sertifikasi_id }}">Detail</a></td>
     		</tr>
     		@endforeach
     		@endslot
     	@endcomponent
+        {{ $data->render() }}
     @else
 	    <div class="col-md-12">
 	    	<p>Sertifikasi Karyawan Belum Terdaftar.</p>

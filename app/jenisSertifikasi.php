@@ -12,7 +12,7 @@ class jenisSertifikasi extends Model
     	protected $fillable = [
         	'id', 'jenis', 'dasar'
     	];
-		public function input_sertifikasi(){
-    		return $this->hasMany('App\inputSertifikasi');
-    	}
+		//public function input_sertifikasi(){
+    	//	return $this->hasMany('App\inputSertifikasi');
+    	//}
 }

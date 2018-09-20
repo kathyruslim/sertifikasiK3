@@ -28,8 +28,8 @@
         </div>
       </header>
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Sertifikasi K3</h1>
-        <p class="lead">Sertifikasi K3 adalah database.............</p>
+        <h3 class="cover-heading">Sistem Informasi Sertifikasi K3</h3>
+        <p class="lead">Sistem Informasi Sertifikasi K3 adalah database sertifikasi K3 yang dimiliki oleh setiap karyawan pada PT Petrokimia Gresik.</p><br><br>
         <p class="lead">
           <a href="{{asset('login')}}" class="btn btn-lg btn-secondary">Login</a>
         </p>

@@ -1,9 +1,9 @@
 @extends('jenisSertifikasi.layout_jenisSertifikasi')
-@section('title', 'Edit Jenis Sertifikasi')
+@section('title', '')
 
 @section('content')
 @component('components.form')
-    @slot('title', 'Edit '.$jenis_sertifikasi->jenis)
+    @slot('title', 'Edit Jenis Sertifikasi : '.$jenis_sertifikasi->jenis)
     @slot('action', '/jenisSertifikasi/'.$jenis_sertifikasi->id.'/edit')
     @slot('form_content')
         @component('components.input_text')
